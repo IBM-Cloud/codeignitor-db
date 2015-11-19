@@ -1,4 +1,8 @@
 ---
+declared-services:
+  mysql:
+    label: mysqldb
+    plan: 100
 applications:
 - name: codeignitor-twilio-demo
   memory: 128M
