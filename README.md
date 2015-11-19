@@ -1,4 +1,4 @@
-## BlueMix PHP Example AppliBlueMixcation: CodeIgniter
+## BlueMix Demo App: CodeIgniter
 
 This is an example application which can be run on BlueMix using the [PHP Build Pack].
 
