@@ -4,7 +4,13 @@ This is an example application which can be run on BlueMix using the [PHP Build 
 
 This is the [CodeIgniter Tutorial] application and it demonstrates push a CodeIgniter applications to BlueMix.
 
-### Usage
+### Deploying this app:
+
+####  Automatically by clicking this image: 
+
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
+
+#### Manually as follows:
 
 1. Clone the app (i.e. this repo)
 
