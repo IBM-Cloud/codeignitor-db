@@ -47,7 +47,7 @@
 
 // Look for bound MySQL Services, pick the first one
 $services = json_decode($_ENV['VCAP_SERVICES'], true);
-$service = $services['cleardb'][0];
+$service = $services['mysql-5.5'][0];
 
 $active_group = 'default';
 $active_record = TRUE;

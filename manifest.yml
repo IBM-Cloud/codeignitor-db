@@ -1,11 +1,11 @@
 ---
 applications:
-- name: code-igniter-demo
+- name: codeignitor-twilio-demo
   memory: 128M
   instances: 1
-  host: code-igniter-demo
+  host: codeignitor-twilio-demo
   path: .
-  buildpack: https://github.com/dmikusa-pivotal/cf-php-build-pack.git
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git
   services:
   - mysql-db
   env:
