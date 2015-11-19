@@ -1,7 +1,7 @@
 ---
 declared-services:
   mysql:
-    label: mysqldb
+    label: mysql-db
     plan: 100
 applications:
 - name: codeignitor-twilio-demo
@@ -12,4 +12,3 @@ applications:
   buildpack: https://github.com/cloudfoundry/php-buildpack.git
   services:
   - mysql-db
-  
