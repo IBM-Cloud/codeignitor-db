@@ -1,27 +1,27 @@
-## CloudFoundry PHP Example Application: CodeIgniter
+## BlueMix PHP Example AppliBlueMixcation: CodeIgniter
 
-This is an example application which can be run on CloudFoundry using the [PHP Build Pack].
+This is an example application which can be run on BlueMix using the [PHP Build Pack].
 
-This is the [CodeIgniter Tutorial] application and it demonstrates push a CodeIgniter applications to CloudFoundry.
+This is the [CodeIgniter Tutorial] application and it demonstrates push a CodeIgniter applications to BlueMix.
 
 ### Usage
 
 1. Clone the app (i.e. this repo)
 
   ```
-  git clone https://github.com/dmikusa-pivotal/cf-ex-code-igniter 
-  cd cf-ex-code-igniter
+  git clone https://github.com/IBM-Bluemix/codeignitor-twilio.git
+  cd codeignitor-twilio
   ```
 
-1. If you don't have one already, create a MySQL service.  With Pivotal Web Services, the following command will create a free MySQL database through [ClearDb].
+1. If you don't have one already, create a MySQL service.  With BlueMix, the following command will create a free MySQL databse.
 
   ```bash
-  cf create-service cleardb spark my-test-mysql-db
+    cf create-service mysql 100 mysql-db
   ```
 
 1. Edit the manifest.yml file.  Change the 'host' attribute to something unique.  Then under "services:" change "mysql-db" to the name of your MySQL service.  This is the name of the service that will be bound to your application and thus available to PHPMyAdmin.
 
-1. Push it to CloudFoundry.
+1. Push it to BlueMix.
 
   ```bash
   cf push
@@ -44,7 +44,6 @@ The migration scripts use the technique described [here](http://zacharyflower.co
 
 
 [CodeIgniter Tutorial]:http://ellislab.com/codeigniter/user-guide/tutorial/index.html
-[PHP Build Pack]:https://github.com/dmikusa-pivotal/cf-php-build-pack
-[ClearDb]:https://www.cleardb.com/
+[PHP Build Pack]:https://github.com/cloudfoundry/php-buildpack.git
 [PHPMyAdmin]:https://github.com/dmikusa-pivotal/cf-ex-phpmyadmin
 [MySQL client]:http://dev.mysql.com/doc/refman/5.6/en/mysql.html
