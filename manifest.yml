@@ -1,7 +1,7 @@
 ---
 declared-services:
-  mysql:
-    label: mysql-db
+  mysql-db:
+    label: mysql
     plan: 100
   twilio:
       label: ci-twilio
