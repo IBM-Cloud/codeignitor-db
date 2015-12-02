@@ -2,7 +2,7 @@
 
 This is an example application which can be run on BlueMix using the [PHP Build Pack].
 
-This is the [CodeIgniter Tutorial] application and it demonstrates push a CodeIgniter applications to BlueMix.
+This is the [CodeIgniter Tutorial] application and it demonstrates running a CodeIgniter application on IBM BlueMix.
 
 ### Deploy this app:
 
@@ -25,13 +25,19 @@ This is the [CodeIgniter Tutorial] application and it demonstrates push a CodeIg
     cf create-service mysql 100 mysql-db
   ```
 
-1. Edit the manifest.yml file.  Change the 'host' attribute to something unique.  Then under "services:" change "mysql-db" to the name of your MySQL service.  This is the name of the service that will be bound to your application and thus available to PHPMyAdmin.
+1. Edit the manifest.yml file.  Change the 'host' attribute to something unique.
 
-1. Push it to BlueMix.
+1. Bind the mysql service you've created to your app.
+
+  ```bash
+    cf bind-service <YOUR UNIQUE APP NAME> mysql-db
+  ```  
+
+1. Push to BlueMix with the updated `manifest.yml`.
 
   ```bash
   cf push
-  ```
+  ```  
 
   Access your application URL in the browser.  You should see the main page and be able to navigate the links.  The news section is pulled from the database.  Initially it'll be empty, but you can create some news entries with the create page.
 
