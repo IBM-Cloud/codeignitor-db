@@ -1,5 +1,5 @@
                     <div>&nbsp;</div>
-                    <strong>&copy; <?=date('Y');?></strong>
+                    <div class="pull-right"><strong>&copy; <?=date('Y');?></strong></div>
                 </div>
             </div>
         </div>
