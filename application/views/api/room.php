@@ -1,6 +1,6 @@
 <Response>
-    <Say voice="woman" language="fr" >
-        Ne quittez pas, s'il vous plaît.
+    <Say voice="woman" language="en" >
+        Please hold the line, your conference will begin shortly.
     </Say>
     <Dial>
         <Conference
