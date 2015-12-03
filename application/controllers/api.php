@@ -2,6 +2,11 @@
 require_once $_ENV['PWD'] . '/lib/vendor/twilio/sdk/Services/Twilio.php';
 class api extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        $this->load->library('session');
+    }
+
     public $layout = null; # disable the default layout so our output isn't wrapped in <html> tags
 
     public function view($page = 'bridge')
@@ -29,21 +34,24 @@ class api extends CI_Controller {
     }
 
     private function initiate_call($to_number) {
-        extract($this->config->item('twilio'));
-
+        extract($this->load_twilio());
         $client = new Services_Twilio($sid, $secret, "2010-04-01");
-
-        $from_number = '8024481506';
         $json = json_decode($_ENV['VCAP_APPLICATION']);
         $callback = 'http://'.$json->application_uris[0].'/api/room';
 
         try{
-            $call = $client->account->calls->create($from_number, $to_number, $callback);
+            $call = $client->account->calls->create($from_num, $to_number, $callback);
         } catch(Exception $e) {
             echo "Error: \n" . $e->getMessage();
         }
 
     }
 
+    private function load_twilio() {
+        extract($this->config->item('twilio'));
+        if((empty($sid) || empty($secret)) && $this->session->userdata('twilio'))
+            extract($this->session->userdata('twilio'));
+        return array('sid' => $sid, 'secret' => $secret, 'from_num' => $from_num);
+    }
 }
 ?>
