@@ -1,8 +1,8 @@
-## BlueMix PHP Demo App: CodeIgniter
+## Bluemix PHP Demo App: CodeIgniter
 
-This is an example application which can be run on BlueMix using the [PHP Build Pack].
+This is an example application which can be run on Bluemix using the [PHP Build Pack].
 
-This is the [CodeIgniter Tutorial] application and it demonstrates running a CodeIgniter application on IBM BlueMix.
+This is the [CodeIgniter Tutorial] application and it demonstrates running a CodeIgniter application on IBM Bluemix.
 
 ### Deploy this app:
 
@@ -19,7 +19,7 @@ This is the [CodeIgniter Tutorial] application and it demonstrates running a Cod
   cd codeignitor-twilio
   ```
 
-1. If you don't have one already, create a MySQL service.  With BlueMix, the following command will create a free MySQL databse.
+1. If you don't have one already, create a MySQL service.  With Bluemix, the following command will create a free MySQL databse.
 
   ```bash
     cf create-service mysql 100 mysql-db
@@ -33,7 +33,7 @@ This is the [CodeIgniter Tutorial] application and it demonstrates running a Cod
     cf bind-service <YOUR UNIQUE APP NAME> mysql-db
   ```  
 
-1. Push to BlueMix with the updated `manifest.yml`.
+1. Push to Bluemix with the updated `manifest.yml`.
 
   ```bash
   cf push
