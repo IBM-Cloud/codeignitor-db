@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'JqLNTL7RdbdnEWaJU5uGxVxs38JG3x9DE2UNrkep';
 
 /*
 |--------------------------------------------------------------------------
@@ -360,6 +360,7 @@ $config['proxy_ips'] = '';
 
 $config['twilio']['sid'] = '';
 $config['twilio']['secret'] = '';
+$config['twilio']['from_num'] = '';
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
