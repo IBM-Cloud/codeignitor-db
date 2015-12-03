@@ -43,6 +43,7 @@ $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
 
 $route['api/(:any)'] = 'api/view/$1';
+$route['config/(:any)'] = 'config/view/$1';
 $route['migrations'] = 'migrations/index';
 
 $route['(:any)'] = 'pages/view/$1';
