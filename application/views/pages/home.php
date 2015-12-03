@@ -1,4 +1,4 @@
-<h2>Extemporaneous Conference Caling</h2>
+<h2>Extemporaneous Conference Calling</h2>
 <p>Enter two or more telephone numbers and submit the form.  Each number will be called and, if they pick up, will be bridged to a conference.</p>
 <form method="get" id="theForm" action="/api/bridge">
     <div id="numbersContainer">
