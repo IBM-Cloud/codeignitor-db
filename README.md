@@ -19,7 +19,7 @@ This is the [CodeIgniter Tutorial] application and it demonstrates running a Cod
   cd codeignitor-twilio
   ```
 
-1. If you don't have one already, create a MySQL service.  With Bluemix, the following command will create a free MySQL databse.
+1. If you don't have one already, create a MySQL service.  With Bluemix, the following command will create a free MySQL database.
 
   ```bash
     cf create-service mysql 100 mysql-db
