@@ -3,9 +3,6 @@ declared-services:
   mysql-db:
     label: mysql
     plan: 100
-  twilio:
-      label: ci-twilio
-      plan: 'user-provided'
 applications:
 - name: codeignitor-twilio-demo
   memory: 128M
