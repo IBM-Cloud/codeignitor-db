@@ -15,8 +15,8 @@ This is the [CodeIgniter Tutorial] application and it demonstrates running a Cod
 1. Clone the app (i.e. this repo)
 
   ```
-  git clone https://github.com/IBM-Bluemix/codeignitor-twilio.git
-  cd codeignitor-twilio
+  git clone https://github.com/IBM-Bluemix/codeignitor-db.git
+  cd codeignitor-db
   ```
 
 1. Create a MySQL service instance specifically for this application.  With Bluemix, the following command will create a free MySQL database.
@@ -26,12 +26,6 @@ This is the [CodeIgniter Tutorial] application and it demonstrates running a Cod
   ```
 
 1. Edit the manifest.yml file.  Change the 'host' attribute to something unique.
-
-1. Bind the mysql service you've created to your app.
-
-  ```bash
-    cf bind-service <YOUR UNIQUE APP NAME> mysql-db
-  ```  
 
 1. Push to Bluemix with the updated `manifest.yml`.
 
