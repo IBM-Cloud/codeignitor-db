@@ -1,15 +1,13 @@
 <h2>Create a news item</h2>
 
-<?php echo validation_errors(); ?>
+<?= validation_errors(); ?>
 
-<?php echo form_open('news/create') ?>
+<?= form_open('news/create') ?>
 
-        <label for="title">Title</label>
-            <input type="input" name="title" /><br />
+    <?= form_input(array('name' => 'title', 'placeholder' => 'News Title')) ?><br/>
 
-    <label for="text">Text</label>
-    <textarea name="text"></textarea><br />
+    <?= form_textarea(array('name' => 'text', 'rows' => '5', 'columns' => '400', 'placeholder' => 'Enter your news story here.')) ?><br/><br/>
 
-    <input type="submit" name="submit" value="Create news item" />
+    <?= form_submit(array('name' => 'submit', 'value' => 'Create news item')) ?>
 
-</form>
+<?= form_close() ?>

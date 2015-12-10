@@ -12,10 +12,10 @@
 	<title><?= $title ?></title>
 
 	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom CSS -->
-	<link href="css/logo-nav.css" rel="stylesheet">
+	<link href="/css/logo-nav.css" rel="stylesheet">
 
 	<!-- FontAwesome if fonting awesome... -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -28,10 +28,10 @@
 	<![endif]-->
 
 	<!-- jQuery -->
-	<script src="js/jquery.js"></script>
+	<script src="/js/jquery.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -49,20 +49,17 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#">
-					<img src="images/bluemix-logo-right.png" alt="">
+					<img src="/images/bluemix-logo-right.png" alt="">
 				</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="#">About</a>
+						<a href="/news">News</a>
 					</li>
 					<li>
-						<a href="#">Services</a>
-					</li>
-					<li>
-						<a href="#">Contact</a>
+						<a href="/news/create">Create</a>
 					</li>
 				</ul>
 			</div>

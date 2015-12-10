@@ -1,14 +1,14 @@
 ---
 declared-services:
-  mysql-db:
+  codeignitor-mysql:
     label: mysql
     plan: 100
 applications:
-- name: codeignitor-twilio-demo
+- name: codeignitor-bluemix-demo
+  host: codeignitor-bluemix-demo
   memory: 128M
   instances: 1
-  host: codeignitor-twilio-demo
   path: .
   buildpack: https://github.com/cloudfoundry/php-buildpack.git
   services:
-  - mysql-db
+  - codeignitor-mysql

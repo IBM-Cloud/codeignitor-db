@@ -17,22 +17,8 @@ class pages extends CI_Controller {
         $data['title'] = ucfirst($page);  // Capitalize the first letter
 
         $this->load->view('templates/header', $data);
-
-
-        $twilio = $this->load_twilio();
-        if(empty($twilio['sid']) || empty($twilio['secret']) || empty($twilio['from_num']))
-            $this->load->view('pages/credentials', $data );
-        else
-            $this->load->view('pages/' . $page, $data);
-
+        $this->load->view('pages/' . $page, $data);
         $this->load->view('templates/footer', $data);
-    }
-
-    private function load_twilio() {
-        extract($this->config->item('twilio'));
-        if((empty($sid) || empty($secret)) && $this->session->userdata('twilio'))
-            extract($this->session->userdata('twilio'));
-        return array('sid' => $sid, 'secret' => $secret, 'from_num' => $from_num);
     }
 
 }
