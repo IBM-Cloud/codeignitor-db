@@ -14,7 +14,10 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,strpos( $_SERVER["SERVER_PROTOCOL"],'/'))).'://';
+$json = json_decode($_ENV['VCAP_APPLICATION']);
+$url = $protocol.$json->application_uris[0];
+$config['base_url']	= $url;
 
 /*
 |--------------------------------------------------------------------------
